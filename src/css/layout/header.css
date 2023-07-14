@@ -1,0 +1,44 @@
+header {
+  padding: 1em 0 0 4em;
+  display: flex;
+}
+
+.h-img-container {
+  display: flex;
+  float: left;
+  width: 20%;
+  min-width: 240px;
+  height: 8%;
+  min-height: 90px;
+  align-items: center;
+}
+
+.h-img-container img {
+  width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+.navbar {
+  display: flex;
+  float: right;
+  text-align: right;
+  justify-content: right;
+  margin-right: 6em;
+  align-items: center;
+  width: 80%;
+  transition: background-color 0.1s;
+}
+
+.navbar a {
+  margin: 0 .25em;
+  padding: .5em 1.5em;
+  border-radius: 5px;
+  background-color: white;
+  color: darkmagenta;
+  transition: background-color 0.2s;
+}
+
+.navbar a:hover {
+  background-color:lavender;
+}

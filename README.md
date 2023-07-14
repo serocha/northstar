@@ -1,2 +1,2 @@
-# northstar
-Counseling website
+# North Star
+A website for North Star Counseling
