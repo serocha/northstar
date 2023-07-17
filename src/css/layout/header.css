@@ -1,23 +1,30 @@
 header {
   padding: 1em 0 0 4em;
   display: flex;
+  background-color: #8f9779;
+  color: #f5fded;
+  border-bottom: 2px solid #679267;
 }
 
-.h-img-container {
+.h-logo-container {
   display: flex;
   float: left;
   width: 20%;
   min-width: 240px;
   height: 8%;
   min-height: 90px;
-  align-items: center;
+  align-items: end;
 }
 
-.h-img-container img {
+.h-logo-container h1 {
+  margin: 0;
+}
+
+/* .h-logo-container img {
   width: 100%;
   height: auto;
   display: inline-block;
-}
+} */
 
 .navbar {
   display: flex;
@@ -25,7 +32,7 @@ header {
   text-align: right;
   justify-content: right;
   margin-right: 6em;
-  align-items: center;
+  align-items: end;
   width: 80%;
   transition: background-color 0.1s;
 }
@@ -34,11 +41,11 @@ header {
   margin: 0 .25em;
   padding: .5em 1.5em;
   border-radius: 5px;
-  background-color: white;
-  color: darkmagenta;
+  background-color: none;
+  color: #f5fded;
   transition: background-color 0.2s;
 }
 
 .navbar a:hover {
-  background-color:lavender;
+  background-color: #679267;
 }
