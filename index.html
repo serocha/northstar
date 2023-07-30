@@ -10,17 +10,17 @@
   <meta property="og:url" content="https://www.northstarcounseling.org">
   <meta property="og:type" content="website">
   <meta property="og:description" content="Therapy to Support Your Well Being."> <!-- TODO: Update content -->
-  <link rel="icon" href=".\favicon.png"> <!-- TODO: Update icon -->
+  <link rel="icon" href="./imgs/favicon.png"> <!-- TODO: Update icon -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href=".\style.css">
-  <script src=".\script.js"></script>
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <script src="./scripts/script.js"></script>
 </head>
 <body>
-  <header>
+  <header id="header">
     <div class="header-logo">
-      <img src="./logo.png">
+      <img src="./imgs/logo.png">
       <h1 class="logo-txt">North Star</h1>
     </div>
     <div id="nav-open" class="header-menu-icon" onclick="toggleMenu();">
@@ -37,7 +37,9 @@
         </div>
         <div class="banner-img">
           <img src="https://www.beyondblackwhite.com/wp-content/uploads/2014/11/New-Mexico.jpg">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f5fded" fill-opacity="1" d="M0,32L80,26.7C160,21,320,11,480,42.7C640,75,800,149,960,192C1120,235,1280,245,1360,250.7L1440,256L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+          <div class="banner-transition">
+            <svg class="section-transition" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f5fded" fill-opacity="1" d="M0,32L80,26.7C160,21,320,11,480,42.7C640,75,800,149,960,192C1120,235,1280,245,1360,250.7L1440,256L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+          </div>
         </div>
       </div>
     </section>
@@ -50,25 +52,27 @@
     <section id="home-solution">
       <div class="sol-wrapper">
         <div class="sol-icon">
-          <img style="height:100%; width:100%;" src="./clipboard-icon.png">
+          <img style="height:100%; width:100%;" src="./imgs/clipboard-icon.png">
         </div>
         <h4>Professional</h4>
         <p>Our experienced, licensed therapists offer safe and effective psychological care from the comfort of your own home.</p>
         <div class="sol-icon">
-          <img style="height:100%; width:100%;" src="./lightbulb-icon.png">
+          <img style="height:100%; width:100%;" src="./imgs/lightbulb-icon.png">
         </div>
         <h4>Individualized</h4>
         <p>Our focus is to help you heal, energize, and become aware of your inner strengths with customized treatment plans.</p>
         <div class="sol-icon">
-          <img style="height:100%; width:100%;" src="./crossroads-icon.png">
+          <img style="height:100%; width:100%;" src="./imgs/crossroads-icon.png">
         </div>
         <h4>Mindful</h4>
-        <p>We promise to be there for you through every step of your journey.</p>
+        <p>Our goal is to help you grow, heal, and move forward. We promise to be beside you for every step of your journey.</p>
       </div>
       <div style="display:flex; align-items: center;">
-        <button id="sol-btn" class="button">Contact Us</button>
+        <button class="btn sol-btn">Contact Us</button>
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#679267" fill-opacity="1" d="M0,256L1440,128L1440,320L0,320Z"></path></svg>
+      <div id="sol-transition">
+        <svg class="section-transition" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#679267" fill-opacity="1" d="M0,256L1440,128L1440,320L0,320Z"></path></svg>
+      </div>
     </section>
     <section id="home-training">
       <div class="txt">
@@ -76,12 +80,69 @@
         <h1 class="training-hook">Get customized training for your needs.</h1>
       </div>
     </section>
+    <section id="home-about">
+      <div>
+        <svg style="margin-top: -1px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#679267" fill-opacity="1" d="M0,224L1440,128L1440,0L0,0Z"></path></svg>
+      </div>
+      <div class="txt">
+        <h1 style="color:rgb(59, 59, 59); margin-bottom:2em;">About Us</h1>
+        <div class="profile">
+          <div>
+            <img class="portrait" src="./imgs/leasa.jpg">
+            <h3>Leasa Medina, LCSW</h3>
+            <h4 class="sub-title">Owner</h4>
+            <p>
+              Leasa received her Bachelors of Arts in Psychology from The University of New Mexico and her Masters in Clinical Social Work from New Mexico Highlands University.
+              <br><br>
+              She has 15 years of experience in the behavioral health field, six years as a Clinical Social Worker and eight years as a supervisor.
+            </p>
+            <div class="member-btn-wrapper">
+              <button class="btn member-btn">Contact Leasa</button>
+            </div>
+          </div>
+        </div>
+        <div class="profile profile-rev">
+          <img class="portrait" src="./imgs/melissa.jpg">
+          <h3>Melissa Love, LPCC</h3>
+          <h4 class="sub-title">Therapist</h4>
+          <p>
+            Melissa received her Bachelors of Art in Sculpture from the University of Arkansas and her Masters in Art Therapy and Counseling from Southwestern College in Santa Fe, NM.
+            <br><br>
+            She has exceptional experience working with pre-teens, teens, and young adults facing numerous behavioral health challenges.
+          </p>
+          <div class="btn-wrapper">
+            <button class="btn member-btn">Contact Melissa</button>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex; align-items: end; margin-bottom: -1px;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#4d724d" fill-opacity="1" d="M0,96L80,101.3C160,107,320,117,480,128C640,139,800,149,960,128C1120,107,1280,53,1360,26.7L1440,0L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+      </div>
+    </section>
     <section id="home-cta">
-
+      <div class="txt">
+        <h2 style="color:white;">Let's talk!</h2>
+        <p style="font-size: 18px;">Schedule a consultation or chat with us about any questions you may have.</p>
+        <div class="btn-wrapper">
+          <button class="btn cta-btn">We'd love to hear from you</button>
+        </div>
+      </div>
+      <div class="cta-img-wrapper">
+        <svg class="cta-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#4d724d" fill-opacity="1" d="M0,288L80,256C160,224,320,160,480,122.7C640,85,800,75,960,85.3C1120,96,1280,128,1360,144L1440,160L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
+        <img class="cta-img" style="box-shadow: 0 4px 4px -4px rgb(25, 25, 25);" src="./imgs/skies.jpg">
+      </div>
     </section>
   </div>
   <footer>
-    Icon vectors by <a href="https://github.com/dohliam/elegant-circles?ref=svgrepo.com" target="_blank">Dohliam</a>
+    <div>
+      <p>Copyright © 2023 North Star Counseling - All Rights Reserved.</p>
+      <div class="txt footer-links">
+        <a href="#header">Back to Top</a>
+        <a href="#home-about">About</a>
+        <a>Contact Us</a>
+      </div>
+      <p style="padding-bottom: 2em;">Powered by GoDaddy. Icon vectors by <a style="text-decoration: none;" href="https://github.com/dohliam/elegant-circles?ref=svgrepo.com" target="_blank">Dohliam</a>.</p>
+    </div>
   </footer>
   <div id="nav-tray" class="nav nav-hide">
     <div class="nav-top">
