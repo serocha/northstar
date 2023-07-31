@@ -152,6 +152,14 @@ header {
   height: 70vh;
 }
 
+.training-line {
+  width: 40%;
+  height: 2px;
+  margin: auto;
+  background-color: #f5fded;
+}
+
+
 .training-hook {
   color: #f5fded;
   font-weight: 400;
@@ -246,7 +254,7 @@ footer a {
   color: inherit;
 }
 
-.footer-links {
+.home-footer-links {
   padding: 2em;
   display: flex;
   justify-content: space-between;

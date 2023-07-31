@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+  <title>North Star Counseling. Therapy to Support Your Well Being.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta property="og:site_name" content="North Star Counseling">
+  <meta property="og:title" content="North Star Counseling. Therapy to Support Your Well-Being.">
+  <meta property="og:url" content="https://www.northstarcounseling.org">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="Therapy to Support Your Well Being."> <!-- TODO: Update content -->
+  <link rel="icon" href="./imgs/favicon.png"> <!-- TODO: Update icon -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <link rel="stylesheet" type="text/css" href="./css/style-form.css">
+  <script src="./scripts/script.js"></script>
+</head>
+<body onload="init()">
+  <header id="header">
+    <div class="header-logo">
+      <img src="./imgs/logo.png">
+      <h1 class="logo-txt">North Star</h1>
+    </div>
+    <div id="nav-open" class="header-menu-icon" onclick="toggleMenu();">
+      <svg viewBox="0 -1 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" fill="#000000" stroke="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>hamburger</title> <desc>Created with Sketch Beta.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage"> <g id="Icon-Set" sketch:type="MSLayerGroup" transform="translate(-210.000000, -887.000000)" fill="#000000"> <path d="M229,895 L211,895 C210.448,895 210,895.448 210,896 C210,896.553 210.448,897 211,897 L229,897 C229.552,897 230,896.553 230,896 C230,895.448 229.552,895 229,895 L229,895 Z M229,903 L211,903 C210.448,903 210,903.448 210,904 C210,904.553 210.448,905 211,905 L229,905 C229.552,905 230,904.553 230,904 C230,903.448 229.552,903 229,903 L229,903 Z M211,889 L229,889 C229.552,889 230,888.553 230,888 C230,887.448 229.552,887 229,887 L211,887 C210.448,887 210,887.448 210,888 C210,888.553 210.448,889 211,889 L211,889 Z" id="hamburger" sketch:type="MSShapeGroup"> </path> </g> </g> </g></svg>
+    </div>
+  </header>
+  <div>
+    <form class="txt">
+      <div>Your details</div>
+      <div class="info-section">
+        <label for="name">Name *</label><br>
+        <input type="text" id="name" name="name" required><span id="name-check"/><br>
+        <label for="email">Email *</label><br>
+        <input type="email" id="email" name="email" required><span id="email-check"/><br>
+        <label for="phone">Phone</label><br>
+        <input type="tel" id="phone" name="phone"><br><br>
+      </div>
+      <div>How can we help?</div>
+      <div class="info-section">
+        <label for="subject">Subject</label><br>
+        <select id="subject" name="subject">
+          <option value="inquiry">I have a question</option>
+          <option value="consultation">I'd like to schedule a consultation</option>
+          <option value="training" onclick="filterContacts();">I'm interested in training</option>
+        </select><br><br>
+        <input type="checkbox" id="toggle-contact" name="toggle-contact" onclick="toggleContact();">
+        <label for="toggle-contact">I'd like to talk to someone specifically</label><br>
+        <select id="contact" name="contact" disabled>
+          <option id="leasa" value="leasa">Contact Leasa</option>
+          <option id="melissa" value="m">Contact Melissa</option>
+        </select><br><br>
+        <label for="message">Message *</label><br>
+        <textarea id="message" name="message" placeholder="Write to us here..." required></textarea><span id="message-check"/><br>
+        <div id="char-div"><span id="char-span"></span> characters remaining</div><br>
+      </div>
+      
+      <input type="submit">
+    </form>
+  </div>
+  <footer>
+    <div class="txt home-footer-links">
+      <a href="#header">Home</a>
+      <a href="#home-about">About</a>
+    </div>
+    <p style="padding-top: 2em;">Copyright © 2023 North Star Counseling - All Rights Reserved.</p>
+    <p style="padding-bottom: 2em;">Powered by <a style="text-decoration: none;" href="https://www.godaddy.com/">GoDaddy</a>.</p>
+  </footer>
+  <div id="nav-tray" class="nav nav-hide">
+    <div class="nav-top">
+      <svg id='nav-close' class="nav-close-btn" onclick="toggleMenu();" width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M20.7457 3.32851C20.3552 2.93798 19.722 2.93798 19.3315 3.32851L12.0371 10.6229L4.74275 3.32851C4.35223 2.93798 3.71906 2.93798 3.32854 3.32851C2.93801 3.71903 2.93801 4.3522 3.32854 4.74272L10.6229 12.0371L3.32856 19.3314C2.93803 19.722 2.93803 20.3551 3.32856 20.7457C3.71908 21.1362 4.35225 21.1362 4.74277 20.7457L12.0371 13.4513L19.3315 20.7457C19.722 21.1362 20.3552 21.1362 20.7457 20.7457C21.1362 20.3551 21.1362 19.722 20.7457 19.3315L13.4513 12.0371L20.7457 4.74272C21.1362 4.3522 21.1362 3.71903 20.7457 3.32851Z" fill="#0F0F0F"></path> </g></svg>
+    </div>
+    <div class="nav-items txt">
+      <div class="nav-item">
+        <a href="#home-prob" onclick="toggleMenu();">Services</a>
+      </div>
+      <div class="nav-item">
+        <a href="#home-training" onclick="toggleMenu();">Trainings</a>
+      </div>
+      <div class="nav-item">
+        <a href="#home-about" onclick="toggleMenu();">About</a>
+      </div>
+      <div class="nav-item">
+        <a href="#" onclick="toggleMenu();">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
