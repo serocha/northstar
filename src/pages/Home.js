@@ -1,7 +1,14 @@
+import NavTray from '../components/NavTray';
 
 function Home(props) {
+
+  const navSections = ['Services', 'Trainings', 'Our Team', 'Contact Us'];
+
   return(
-    <div>This is my home page.</div>
+    <div>
+      <div>This is my home page.</div>
+      <NavTray sections={navSections} isTrayOpen={props.isTrayOpen} toggleTray={props.toggleTray} />
+    </div>
   );
 }
 

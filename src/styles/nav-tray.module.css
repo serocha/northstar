@@ -6,7 +6,7 @@
   height: 100vh;
   background-color: white;
   transition: transform .4s;
-  z-index: 100;
+  z-index: 10;
 }
 
 .navTrayTop {
@@ -26,6 +26,10 @@
   transition: transform .4s;
 }
 
+.navItems {
+  margin-left: 2em;
+}
+
 .navItem {
   font-size: 24px;
   margin-top: 0.5em;
@@ -33,7 +37,7 @@
   cursor: pointer;
 }
 
-.navItemLn {
+.navItem a {
   text-decoration: none;
   color: inherit;
 }
