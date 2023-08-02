@@ -88,7 +88,7 @@ header {
   margin-bottom: -1px;
 }
 
-#home-prob {
+#services {
   background-color: #f5fded;
   height: 25vh;
 }
@@ -147,7 +147,7 @@ header {
   align-items: end;
 }
 
-#home-training {
+#trainings {
   background-color: #679267;
   height: 70vh;
 }
@@ -165,7 +165,7 @@ header {
   font-weight: 400;
 }
 
-#home-about {
+#about {
   background-color: #e4ebdd;
 }
 
