@@ -1,0 +1,20 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 64px;
+  flex-wrap: wrap;
+  background-color: white;
+}
+
+.headerLogo {
+  width: 180px;
+  margin: 0.25em 1em;
+}
+
+.headerMenuIcon {
+  width: 22px;
+  height: 22px;
+  margin-right: 24px;
+  cursor: pointer;
+}
