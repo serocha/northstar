@@ -1,8 +1,9 @@
 import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 
-import Header from './components/Header';
 import Home from './pages/Home';
-import Footer from './components/Footer';
+import OurTeam from './pages/OurTeam';
+import ContactUs from './pages/ContactUs';
 
 function App() {
   const [isTrayOpen, setTrayOpen] = useState(false);
@@ -12,11 +13,11 @@ function App() {
   };
 
   return (
-    <div className="app">
-      <Header isTrayOpen={isTrayOpen} toggleTray={toggleTray} />
-      <Home isTrayOpen={isTrayOpen} toggleTray={toggleTray} />
-      <Footer />
-    </div>
+    <Routes>
+      <Route path="/" element={<Home isTrayOpen={isTrayOpen} toggleTray={toggleTray} />} />
+      <Route path="/about" element={<OurTeam isTrayOpen={isTrayOpen} toggleTray={toggleTray} />} />
+      <Route path="/contact" element={<ContactUs isTrayOpen={isTrayOpen} toggleTray={toggleTray} />} />
+    </Routes>
   );
 }
 

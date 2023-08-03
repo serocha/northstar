@@ -1,20 +1,41 @@
+import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import style from '../styles/nav-tray.module.css';
 
 function NavTray(props) {
 
-  const rendered = props.sections.map(section => {
-    var symbol;
-    if (section === 'Contact Us' || section === 'Our Team') {
-      symbol = '/';
-    } else {
-      symbol = '#';
+  const rendered = props.routes.map(route => {
+    var reference;
+
+    switch (route) {
+      case 'Home':
+        reference = (
+          <Link to='/' onClick={props.toggleTray}>
+            {route}  
+          </Link>);
+        break;
+      case 'Contact Us':
+        reference = (
+          <Link to='/contact' onClick={props.toggleTray}>
+            {route}  
+          </Link>);
+        break;
+      case 'Our Team':
+        reference = (
+          <Link to='/about' onClick={props.toggleTray}>
+            {route}  
+          </Link>);
+        break;
+      default: 
+        reference = (
+          <HashLink smooth to={'/#' + route.toLowerCase()} onClick={props.toggleTray}>
+            {route}  
+          </HashLink>);
     }
-    const reference = symbol + section.split(' ').join('-').toLowerCase();
+
     return (
-      <div key={reference} className={style.navItem}>
-        <a href={reference} onClick={props.toggleTray}>
-          {section}  
-        </a>
+      <div key={route} className={style.navItem}>
+        {reference}
       </div>
     );
   });

@@ -1,0 +1,29 @@
+.footer {
+  background-color: rgb(54, 53, 53);
+  color: white;
+}
+
+.footerLinks {
+  padding: 2em;
+  display: flex;
+  color: white;
+}
+
+.footerLinkWrapper {
+  flex: 1;
+  text-align: center;
+}
+
+.footerLink {
+  margin-top: 0.5em;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footerNotes {
+  margin: 0;
+  padding-bottom: 2em;
+  text-align: center;
+  font-size: 10px;
+}

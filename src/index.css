@@ -24,3 +24,13 @@ button:hover {
   background-color: rgb(241, 188, 54);
   color: white
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.centered {
+  margin: 0 auto;
+}
