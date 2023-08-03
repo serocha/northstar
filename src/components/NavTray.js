@@ -11,7 +11,7 @@ function NavTray(props) {
     }
     const reference = symbol + section.split(' ').join('-').toLowerCase();
     return (
-      <div className={style.navItem}>
+      <div key={reference} className={style.navItem}>
         <a href={reference} onClick={props.toggleTray}>
           {section}  
         </a>
