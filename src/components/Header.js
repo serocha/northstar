@@ -5,7 +5,7 @@ function Header(props) {
   const logo = require('../assets/logo.png');
 
   return(
-    <header id=" " className={style.header}>
+    <header id="top" className={style.header}>
       <Link to='/'>
         <img className={style.headerLogo} src={logo} alt="Logo" />
       </Link>

@@ -31,9 +31,12 @@
   margin-bottom: 1em;
 }
 
+.profileBtnWrapper {
+  margin: 2em 0 4em;
+}
+
 .profileBtn {
   background-color: whitesmoke;
   box-shadow: 1px 1px 4px #afb6a9;
-  margin: 1em auto 4em;
   transition: 0.25s background-color, 0.1s color;
 }

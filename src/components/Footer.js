@@ -11,7 +11,7 @@ function Footer(props) {
         reference = <HashLink className={style.footerLink} smooth to="#top">{route}</HashLink>;
         break;
       case 'Home':
-        reference = <Link className={style.footerLink} to="/">{route}</Link>;
+        reference = <Link className={style.footerLink} to="/#home">{route}</Link>;
         break;
       case 'About':
         reference = <Link className={style.footerLink} to="/about">{route}</Link>;

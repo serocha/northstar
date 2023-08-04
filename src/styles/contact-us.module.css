@@ -3,3 +3,18 @@
   padding: 0 1em;
   margin: 2em 0;
 }
+
+.red {
+  color: red;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+  filter: saturate(0);
+}
+
+.submitBtn {
+  padding: 0 2em;
+  box-shadow: 1px 1px 4px gray;
+}

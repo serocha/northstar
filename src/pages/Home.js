@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+
 import Header from '../components/Header'
 import NavTray from '../components/NavTray'
 import Footer from '../components/Footer'
@@ -9,6 +11,10 @@ import CTA from '../components/CTA'
 import '../styles/global.module.css'
 
 function Home(props) {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   const navRoutes = ['Services', 'Training', 'Our Team', 'Contact Us'];
   const footerRoutes = ['Back to Top', 'About', 'Contact Us'];
