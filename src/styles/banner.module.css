@@ -1,0 +1,43 @@
+.txt {
+  composes: txt from './home.module.css';
+}
+
+.transitionWrapper {
+  composes: transitionWrapper from './home.module.css';
+}
+
+.transition {
+  composes: transition from './home.module.css';
+}
+
+.banner {
+  background-color: #8f9779;
+  margin-bottom: 0;
+}
+
+.bannerHook {
+  color: white;
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.bannerMore {
+  color: #f5fded;
+}
+
+.bannerImgWrapper {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+}
+
+.bannerImg {
+  width: 100%;
+  height: auto;
+  max-width: 900px;
+}
+
+.bannerTransitionWrapper {
+  position: absolute;
+}

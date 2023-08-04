@@ -1,0 +1,41 @@
+import { Link } from 'react-router-dom'
+import idCard from '../assets/id.png'
+import chat from '../assets/chat.png'
+import grow from '../assets/grow.png'
+import style from '../styles/services.module.css'
+
+function Services() {
+  return (
+    <section id="services" className={style.services}>
+      <div className={style.txt}>
+        <h1 className={style.serviceHook}>Transforming struggles into <span style={{color:'#00693E'}}>strengths</span></h1>
+        <div className={style.serviceLine}></div>
+        <div className={style.serviceWrapper}> {/* consider dynamic creation */}
+          <div className={style.iconWrapper}>
+            <img className={style.icon} src={idCard} alt="professional icon" />
+          </div>
+          <h4>Professional</h4>
+          <p>Our experienced, licensed therapists offer safe and effective psychological care from the comfort of your own home.</p>
+          <div className={style.iconWrapper}>
+            <img className={style.icon} src={chat} alt="individualized icon" />
+          </div>
+          <h4>Individualized</h4>
+          <p>Our focus is to help you heal, energize, and become aware of your inner strengths with customized treatment plans.</p>
+          <div className={style.iconWrapper}>
+            <img className={style.icon} src={grow} alt="mindful icon" />
+          </div>
+          <h4>Mindful</h4>
+          <p>Our goal is to help you grow, heal, and move forward. We promise to be beside you for every step of your journey.</p>
+        </div>
+        <div className={style.btnWrapper}>
+          <Link className='centered' to='/contact'><button className={style.serviceBtn}>Contact Us</button></Link>
+        </div>
+      </div>
+      <div className={style.transitionWrapper}>
+        <svg className={style.transition} viewBox="0 0 1440 320"><path fill="#679267" fillOpacity="1" d="M0,256L1440,128L1440,320L0,320Z"></path></svg>
+      </div>
+    </section>
+  );
+}
+
+export default Services;

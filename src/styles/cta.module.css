@@ -1,0 +1,40 @@
+.txt { composes: txt from './home.module.css'; }
+
+.btnWrapper { composes: btnWrapper from './home.module.css'; }
+
+.cta {
+  background-color: #4d724d;
+}
+
+.cta .txt {
+  color: #f5fded;
+}
+
+.ctaBtn {
+  color: white;
+  background-color: rgb(211, 152, 25);
+  box-shadow: 1px 2px 4px #355035;
+  margin: 2em 0;
+  transition: .2s background-color, .2s color;
+}
+
+.ctaBtn:hover {
+  background-color: rgb(235, 169, 26);
+}
+
+.ctaImgWrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+
+.ctaSvg {
+  position: absolute;
+  margin-top: -1px;
+}
+
+.ctaImg {
+  width: 100%;
+  height: auto;
+}

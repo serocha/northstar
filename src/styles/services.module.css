@@ -1,0 +1,74 @@
+.txt {
+  composes: txt from '../styles/home.module.css';
+}
+
+.transitionWrapper {
+  composes: transitionWrapper from '../styles/home.module.css';
+}
+
+.transition {
+  composes: transition from '../styles/home.module.css';
+}
+
+.iconWrapper {
+  composes: iconWrapper from '../styles/home.module.css';
+}
+
+.icon {
+  composes: icon from '../styles/home.module.css';
+}
+
+.services {
+  background-color: #f5fded;
+}
+
+.serviceHook {
+  margin-top: 0;
+}
+
+.serviceLine {
+  width: 40%;
+  height: 2px;
+  margin: 2em auto;
+  background-color: #679267;
+  border-radius: 4px;
+}
+
+.serviceWrapper {
+  margin-top: 4em;
+  display: flex;
+  flex-direction: column;
+}
+
+.serviceWrapper h4 {
+  margin: 1em 0 0.5em 0;
+}
+
+.serviceWrapper p {
+  margin: 0 0 3em 0;
+}
+
+.icon {
+  height: 100%;
+  width: auto;
+}
+
+.iconWrapper {
+  height: 64px;
+  width: 64px;
+  background-color: cornflowerblue;
+  border-radius: 50%;
+  box-shadow: 0px 1px 2px slategray;
+}
+
+.btnWrapper {
+  display:flex;
+  align-items: center;
+}
+
+.serviceBtn {
+  background-color: rgb(206, 164, 59);
+  box-shadow: 1px 1px 4px #898e84;
+  color: #f5fded;
+  transition: .2s background-color, .2s color;
+}
