@@ -1,15 +1,16 @@
 import { Link } from 'react-router-dom'
-import style from '../styles/aboutsection.module.css'
+import style from '../styles/about-section.module.css'
+import globalStyles from '../utils/globalStyles';
 import profile from '../assets/profile.png'
 
 function AboutSection(props) {
 
   return (
     <section id="about" className={style.about}>
-      <div className={style.transitionWrapper}>
-        <svg className={style.transition} style={{marginTop:'-1px'}} viewBox="0 0 1440 320"><path fill="#679267" fillOpacity="1" d="M0,224L1440,128L1440,0L0,0Z"></path></svg>
+      <div className={globalStyles.transitionWrapper}>
+        <svg className={globalStyles.transition} style={{marginTop:'-1px'}} viewBox="0 0 1440 320"><path fill="#679267" fillOpacity="1" d="M0,224L1440,128L1440,0L0,0Z"></path></svg>
       </div>
-      <div className={style.txt}>
+      <div className={globalStyles.txt}>
         <h1 className={style.aboutHook}>Find Your Fit</h1>
         <p className={style.aboutMore}>Our therapists offer a range of specialized approaches, techniques, and styles.</p>
         <div className={style.aboutBtnWrapper}>
@@ -18,8 +19,8 @@ function AboutSection(props) {
           </div>
           <Link to='/about'>
             <div className={style.aboutBtn}>
-              <div className={style.iconWrapper}>
-                <img className={style.icon} src={profile} alt="About Us link" />
+              <div className={globalStyles.iconWrapper}>
+                <img className={globalStyles.icon} src={profile} alt="About Us link" />
               </div>
             </div>
           </Link>
@@ -29,8 +30,8 @@ function AboutSection(props) {
         </div>
         <p className={style.aboutMore} style={{textAlign:'center'}}>Click to see who resonates most with you.</p>
       </div>
-      <div className={style.transitionWrapper}>
-        <svg className={style.transition} viewBox="0 0 1440 320"><path fill="#4d724d" fillOpacity="1" d="M0,96L80,101.3C160,107,320,117,480,128C640,139,800,149,960,128C1120,107,1280,53,1360,26.7L1440,0L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+      <div className={globalStyles.transitionWrapper}>
+        <svg className={globalStyles.transition} viewBox="0 0 1440 320"><path fill="#4d724d" fillOpacity="1" d="M0,96L80,101.3C160,107,320,117,480,128C640,139,800,149,960,128C1120,107,1280,53,1360,26.7L1440,0L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
       </div>
     </section>
   );

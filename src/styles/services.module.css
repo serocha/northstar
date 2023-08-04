@@ -1,23 +1,3 @@
-.txt {
-  composes: txt from '../styles/home.module.css';
-}
-
-.transitionWrapper {
-  composes: transitionWrapper from '../styles/home.module.css';
-}
-
-.transition {
-  composes: transition from '../styles/home.module.css';
-}
-
-.iconWrapper {
-  composes: iconWrapper from '../styles/home.module.css';
-}
-
-.icon {
-  composes: icon from '../styles/home.module.css';
-}
-
 .services {
   background-color: #f5fded;
 }
