@@ -5,7 +5,7 @@
 
 .txt {
   color: rgb(60, 60, 60);
-  padding: 2em 2em;
+  padding: 2em 10%;
 }
 
 .bannerHook {
@@ -14,7 +14,7 @@
   font-weight: 400;
 }
 
-.bannerSub {
+.bannerMore {
   color: #f5fded;
 }
 
@@ -46,10 +46,6 @@
   margin-bottom: -1px;
 }
 
-.transitionFix {
-  margin-top: -1000px;
-}
-
 .services {
   background-color: #f5fded;
 }
@@ -61,7 +57,7 @@
 .serviceLine {
   width: 40%;
   height: 2px;
-  margin: auto;
+  margin: 2em auto;
   background-color: #679267;
   border-radius: 4px;
 }
@@ -80,16 +76,16 @@
   margin: 0 0 3em 0;
 }
 
-.serviceWrapper img {
+.icon {
   height: 100%;
   width: auto;
 }
 
-.serviceIcon {
+.iconWrapper {
   height: 64px;
   width: 64px;
   background-color: cornflowerblue;
-  border-radius: 100%;
+  border-radius: 50%;
   box-shadow: 0px 1px 2px slategray;
 }
 
@@ -102,6 +98,7 @@
   background-color: rgb(206, 164, 59);
   box-shadow: 1px 1px 4px #898e84;
   color: #f5fded;
+  transition: .2s background-color, .2s color;
 }
 
 .trainings {
@@ -109,17 +106,76 @@
   height: 70vh;
 }
 
+.trainingHook {
+  text-align: right;
+}
+
+.trainingMore {
+  color: #f5fded;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
 .trainingLine {
   width: 40%;
   height: 2px;
   margin: auto;
   background-color: #f5fded;
+  border-radius: 4px;
 }
 
+.about {
+  background-color: #e4ebdd;
+}
 
-.trainingHook {
-  color: #f5fded;
-  font-weight: 400;
+.aboutHook {
+  color: rgb(59, 59, 59);
+  margin: 0;
+}
+
+.aboutMore {
+  margin: 2em 0;
+  font-size: 18px;
+}
+
+.aboutBtnLabel {
+  text-align: center;
+}
+
+.aboutBtnWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 128px;
+  margin: 2em auto;
+}
+
+.aboutBtn {
+  position: relative;
+  background-color: #f5fded;
+  height: 128px;
+  width: 128px;
+  margin: 32px;
+  border-radius: 50%;
+  border: 2px solid forestgreen;
+  box-shadow: 1px 2px 4px #355035;
+  transition: 0.5s height, 0.5s width;
+
+  /* Counteract the margins on hover */
+  &:hover {
+    height: 64px;
+    width: 64px;
+    transition: 0.5s height, 0.5s width;
+  }
+}
+
+.aboutBtn .iconWrapper {
+  position: absolute;
+  margin: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .cta {
@@ -132,13 +188,14 @@
 
 .ctaBtn {
   color: white;
-  background-color: rgb(201, 145, 23);
+  background-color: rgb(211, 152, 25);
   box-shadow: 1px 2px 4px #355035;
   margin: 2em 0;
+  transition: .2s background-color, .2s color;
 }
 
 .ctaBtn:hover {
-  background-color: rgb(229, 165, 25);
+  background-color: rgb(235, 169, 26);
 }
 
 .ctaImgWrapper {

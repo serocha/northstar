@@ -35,7 +35,6 @@ function Footer(props) {
       </div>
       <div className={style.footerNotes}>
         <p>Copyright © 2023 North Star Counseling - All Rights Reserved.</p>
-        <p>Icon vectors by <a href="https://github.com/dohliam/elegant-circles?ref=svgrepo.com" target="_blank" rel="noreferrer">Dohliam</a></p> 
       </div>
     </footer>
   );
