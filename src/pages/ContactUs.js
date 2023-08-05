@@ -64,8 +64,8 @@ function ContactUs(props) {
               onClick={() => setDropdown(!isDropdownEnabled)} />
             <label htmlFor="toggle-contact">I'd like to talk to someone specifically</label><br/>
             <select id="contact" name="contact" className={ isDropdownEnabled ? null : style.disabled }>
-              <option id="leasa" value="leasa">Contact Leasa</option>
-              <option id="melissa" value="m">Contact Melissa</option>
+              <option id="leasa" value="L">Contact Leasa</option>
+              <option id="melissa" value="M">Contact Melissa</option>
             </select><br/><br/>
             <label htmlFor="message">Message *</label><br/>
             <textarea 
