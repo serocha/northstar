@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import style from '../styles/cta.module.css'
+import style from '../styles/CTA.module.scss'
 import skies from '../assets/skies.jpg'
 import globalStyles from '../utils/globalStyles';
 
@@ -7,8 +7,8 @@ function CTA() {
 
   return (
     <section id="cta" className={style.cta}>
-      <div className={globalStyles.txt}>
-        <h2 style={{color:'white'}}>We'd love to hear from you.</h2>
+      <div className={globalStyles.txt} style={{color: 'white'}}>
+        <h2>We'd love to hear from you.</h2>
         <p style={{fontSize:'18px'}}>Schedule a consultation today, or find out more about our services.</p>
         <div className={globalStyles.btnWrapper}>
           <Link className={globalStyles.centered} to='/contact'><button className={style.ctaBtn}>Let's Talk!</button></Link>

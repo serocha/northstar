@@ -1,4 +1,4 @@
-import style from '../styles/training.module.css'
+import style from '../styles/Training.module.scss'
 import globalStyles from '../utils/globalStyles';
 
 function Training() {

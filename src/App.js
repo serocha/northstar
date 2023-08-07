@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import OurTeam from './pages/OurTeam';
 import ContactUs from './pages/ContactUs';
 import Submitted from './components/Submitted';
+import './styles/_global.scss'
 
 function App() {
   const [isTrayOpen, setTrayOpen] = useState(false);

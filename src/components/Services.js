@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import idCard from '../assets/id.png'
 import chat from '../assets/chat.png'
 import grow from '../assets/grow.png'
-import style from '../styles/services.module.css'
+import style from '../styles/Services.module.scss'
 import globalStyles from '../utils/globalStyles'
 
 function Services() {

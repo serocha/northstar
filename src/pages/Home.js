@@ -8,7 +8,7 @@ import Services from '../components/Services'
 import Training from '../components/Training'
 import AboutSection from '../components/AboutSection'
 import CTA from '../components/CTA'
-import '../styles/global.module.css'
+import '../styles/_global.scss'
 
 function Home(props) {
 

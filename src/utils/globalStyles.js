@@ -1,4 +1,4 @@
-// an object to track global styles defined in global.module.css and to keep dot notation
+// an object to track global styles defined in global.css and to keep dot notation
 // imported by components
 const globalStyles = {
   txt: 'txt',

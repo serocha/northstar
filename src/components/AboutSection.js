@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import style from '../styles/about-section.module.css'
+import style from '../styles/AboutSection.module.scss'
 import globalStyles from '../utils/globalStyles';
 import profile from '../assets/profile.png'
 

@@ -1,25 +1,31 @@
-:global(.txt) {
+@import '_variables';
+
+.txt {
   color: rgb(60, 60, 60);
   padding: 2em 10%;
+
+  @media (min-width: $medium-screen) {
+    padding: 4em 20%;
+  }
 }
 
-:global(.transitionWrapper) {
+.transitionWrapper {
   width: 100%;
   display: flex;
   align-items: flex-end;
 }
 
-:global(.transition) {
+.transition {
   width: 100%;
   margin-bottom: -1px;
 }
 
-:global(.icon) {
+.icon {
   height: 100%;
   width: auto;
 }
 
-:global(.iconWrapper) {
+.iconWrapper {
   height: 64px;
   width: 64px;
   background-color: cornflowerblue;
@@ -27,11 +33,11 @@
   box-shadow: 0px 1px 2px slategray;
 }
 
-:global(.btnWrapper) {
-  display:flex;
+.btnWrapper {
+  display: flex;
   align-items: center;
 }
 
-:global(.centered) {
+.centered {
   margin: 0 auto;
 }

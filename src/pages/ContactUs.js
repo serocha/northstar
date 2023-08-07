@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import NavTray from '../components/NavTray'
-import style from '../styles/contact-us.module.css'
+import style from '../styles/ContactUs.module.scss'
 import globalStyles from '../utils/globalStyles'
 
 // need to update to React Forms
