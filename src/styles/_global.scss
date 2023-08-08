@@ -18,6 +18,9 @@
 .transition {
   width: 100%;
   margin-bottom: -1px;
+  @media (min-width: $medium-screen) {
+    transform: scaleY(75%) translateY(25%);
+  }
 }
 
 .icon {

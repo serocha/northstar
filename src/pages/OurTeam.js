@@ -18,7 +18,7 @@ function OurTeam(props) {
 
   return(
     <div id="about">
-      <Header isTrayOpen={props.isTrayOpen} toggleTray={props.toggleTray} />
+      <Header routes={navRoutes} isTrayOpen={props.isTrayOpen} toggleTray={props.toggleTray} />
       <div className={[globalStyles.txt, style.background].join(' ')}>
         <h1 style={{color:'rgb(59, 59, 59)',textAlign:'center'}}>Our Team</h1>
         <div className={style.profile}>

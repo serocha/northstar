@@ -21,7 +21,7 @@ function Home(props) {
 
   return(
     <div id="home">
-      <Header isTrayOpen={props.isTrayOpen} toggleTray={props.toggleTray} />
+      <Header routes={navRoutes} isTrayOpen={props.isTrayOpen} toggleTray={props.toggleTray} />
       <Banner />
       <Services />
       <Training />

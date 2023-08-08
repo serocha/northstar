@@ -37,7 +37,7 @@ function ContactUs(props) {
 
   return(
     <div id="contact">
-      <Header isTrayOpen={props.isTrayOpen} toggleTray={props.toggleTray} />
+      <Header routes={navRoutes} isTrayOpen={props.isTrayOpen} toggleTray={props.toggleTray} />
       <div>
         <form className={globalStyles.txt}>
           <div>Your details</div>

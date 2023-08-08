@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 .header{
   display: flex;
   justify-content: space-between;
@@ -10,6 +12,14 @@
 .headerLogo {
   width: 180px;
   margin: 0.25em 1em;
+
+  @media (min-width: $medium-screen) {
+    width: 33%;
+    height: auto;
+    margin: 1em;
+    max-width: 600px;
+    min-width: 180px;
+  }
 }
 
 .headerMenuIcon {
@@ -17,4 +27,26 @@
   height: 22px;
   margin-right: 24px;
   cursor: pointer;
+  @media (min-width: $medium-screen) {
+    pointer-events: none;
+    display: none;
+  }
+}
+
+.headerLinks {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.headerLink {
+  pointer-events: none;
+  display: none;
+  @media (min-width: $medium-screen) {
+    pointer-events: initial;
+    display: flex;
+    flex: 1;
+    white-space: nowrap;
+    margin: 0 2em;
+  }
 }
