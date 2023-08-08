@@ -4,7 +4,7 @@ import globalStyles from '../utils/globalStyles';
 function Banner () {
   return (
     <section id="banner" className={style.banner}>
-      <div className={[globalStyles.txt, style.bannerTxt].join(' ')}>
+      <div className={style.bannerTxt}>
         <h1 className={style.bannerHook}>Therapy to support your well-being</h1>
         <p className={style.bannerMore}>We help do <strong>stuff</strong> through things, things, and more things.</p>
       </div>

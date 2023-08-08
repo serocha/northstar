@@ -7,24 +7,24 @@ function Header(props) {
 
   const rendered = props.routes.map(route => {
     var reference;
-
+    route = route.toLowerCase();
     switch (route) {
-      case 'Home':
+      case 'home':
         reference = (
           <Link to='/'>
             {route}  
           </Link>);
         break;
-      case 'Contact Us':
+      case 'contact us':
         reference = (
           <Link to='/contact'>
             {route}  
           </Link>);
         break;
-      case 'Our Team':
+      case 'our team':
         reference = (
           <Link to='/about'>
-            {route}  
+            {route}
           </Link>);
         break;
       default: 
@@ -44,7 +44,7 @@ function Header(props) {
   return(
     <header id="top" className={style.header}>
       <div id="nav-links" className={style.headerLinks}>
-        <Link to='/'>
+        <Link style={{cursor: 'default'}} to='/'>
           <img className={style.headerLogo} src={logo} alt="Logo" />
         </Link>
         {rendered}

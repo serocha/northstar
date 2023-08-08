@@ -6,6 +6,7 @@ const globalStyles = {
   icon: 'icon',
   transitionWrapper: 'transitionWrapper',
   transition: 'transition',
+  transitionReverse: 'transitionReverse',
   btnWrapper: 'btnWrapper',
   centered:'centered'
 };

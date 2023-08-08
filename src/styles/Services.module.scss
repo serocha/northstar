@@ -1,5 +1,11 @@
+@import './_variables';
+
 .services {
   background-color: #f5fded;
+}
+
+.serviceTxt {
+  padding: 2em 4em;
 }
 
 .serviceHook {
@@ -18,14 +24,35 @@
   margin-top: 4em;
   display: flex;
   flex-direction: column;
+  @media (min-width: $medium-screen) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  @media (min-width: $large-screen) {
+    justify-content: space-between;
+  }
 }
 
-.serviceWrapper h4 {
+.service {
+  @media (min-width: $medium-screen) {
+    margin: 1em auto;
+    flex-basis: 40%;
+  }
+  @media (min-width: $large-screen) {
+    flex-basis: 25%;
+  }
+}
+
+.iconTxt h4 {
   margin: 1em 0 0.5em 0;
 }
 
-.serviceWrapper p {
-  margin: 0 0 3em 0;
+.iconTxt p {
+  margin-bottom: 3em;
+  @media (min-width: $medium-screen) {
+    margin-bottom: 0;
+  }
 }
 
 .icon {
@@ -47,8 +74,26 @@
 }
 
 .serviceBtn {
+  margin-top: 0;
   background-color: rgb(206, 164, 59);
   box-shadow: 1px 1px 4px #898e84;
   color: #f5fded;
   transition: .2s background-color, .2s color;
+  @media (min-width: $medium-screen) {
+    margin: 4em 0;
+    padding: 0 4em;
+  }
+}
+
+.serviceTransitionWrapper {
+  @media (min-width: $medium-screen) {
+    position: relative;
+  }
+}
+
+.serviceTransition {
+  @media (min-width: $medium-screen) {
+    position: absolute;
+    bottom: 0;
+  }
 }
