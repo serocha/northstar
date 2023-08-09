@@ -1,4 +1,4 @@
-@import './_variables';
+@import '../partial/_variables';
 
 .services {
   background-color: #f5fded;
@@ -10,6 +10,9 @@
 
 .serviceHook {
   margin-top: 0;
+  @media (min-width: $medium-screen) {
+    margin-left: 20%;
+  }
 }
 
 .serviceLine {
@@ -73,27 +76,13 @@
   align-items: center;
 }
 
-.serviceBtn {
+.serviceBtn {z-index: 100;
   margin-top: 0;
+  color: white;
   background-color: rgb(206, 164, 59);
   box-shadow: 1px 1px 4px #898e84;
-  color: #f5fded;
   transition: .2s background-color, .2s color;
   @media (min-width: $medium-screen) {
-    margin: 4em 0;
     padding: 0 4em;
-  }
-}
-
-.serviceTransitionWrapper {
-  @media (min-width: $medium-screen) {
-    position: relative;
-  }
-}
-
-.serviceTransition {
-  @media (min-width: $medium-screen) {
-    position: absolute;
-    bottom: 0;
   }
 }

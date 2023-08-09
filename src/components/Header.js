@@ -1,52 +1,31 @@
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
-import style from '../styles/Header.module.scss';
+import style from '../styles/components/Header.module.scss';
 
 function Header(props) {
   const logo = require('../assets/logo.png');
-
-  const rendered = props.routes.map(route => {
-    var reference;
-    route = route.toLowerCase();
-    switch (route) {
-      case 'home':
-        reference = (
-          <Link to='/'>
-            {route}  
-          </Link>);
-        break;
-      case 'contact us':
-        reference = (
-          <Link to='/contact'>
-            {route}  
-          </Link>);
-        break;
-      case 'our team':
-        reference = (
-          <Link to='/about'>
-            {route}
-          </Link>);
-        break;
-      default: 
-        reference = (
-          <HashLink smooth to={'/#' + route.toLowerCase()}>
-            {route}  
-          </HashLink>);
+  const rendered = props.navRoutes.map(route => {
+    let ref;
+    if (route.isHashLink) {
+      ref = <HashLink smooth to={route.to}>{route.content.toLowerCase()}</HashLink>
+    } else {
+      ref = <Link to={route.to}>{route.content.toLowerCase()}</Link>
     }
-
     return (
-      <div key={route} className={style.headerLink}>
-        {reference}
+      <div key={route.content} className={style.headerLink}>
+        {ref}
       </div>
     );
   });
 
   return(
     <header id="top" className={style.header}>
-      <div id="nav-links" className={style.headerLinks}>
-        <Link style={{cursor: 'default'}} to='/'>
+      <div>
+        <Link style={{cursor: 'default', display: 'contents'}} to='/'>
           <img className={style.headerLogo} src={logo} alt="Logo" />
         </Link>
+      </div>
+      <div id="nav-links" className={style.headerLinks}>
         {rendered}
       </div>
       <div id="nav-open-btn" className={style.headerMenuIcon} onClick={props.toggleTray}>

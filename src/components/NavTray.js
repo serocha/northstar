@@ -1,41 +1,27 @@
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
-import style from '../styles/NavTray.module.scss';
+import style from '../styles/components/NavTray.module.scss';
 
 function NavTray(props) {
 
-  const rendered = props.routes.map(route => {
-    var reference;
-
-    switch (route) {
-      case 'Home':
-        reference = (
-          <Link to='/' onClick={props.toggleTray}>
-            {route}  
-          </Link>);
-        break;
-      case 'Contact Us':
-        reference = (
-          <Link to='/contact' onClick={props.toggleTray}>
-            {route}  
-          </Link>);
-        break;
-      case 'Our Team':
-        reference = (
-          <Link to='/about' onClick={props.toggleTray}>
-            {route}  
-          </Link>);
-        break;
-      default: 
-        reference = (
-          <HashLink smooth to={'/#' + route.toLowerCase()} onClick={props.toggleTray}>
-            {route}  
-          </HashLink>);
+  const rendered = props.navRoutes.map(route => {
+    let ref;
+    if (route.isHashLink) {
+      ref = (
+        <HashLink smooth to={route.to} onClick={props.toggleTray}>
+          {route.content}
+        </HashLink>
+      )
+    } else {
+      ref = (
+        <Link to={route.to} onClick={props.toggleTray}>
+          {route.content}
+        </Link>
+      )
     }
-
     return (
-      <div key={route} className={style.navItem}>
-        {reference}
+      <div key={route.content} className={style.navItem}>
+        {ref}
       </div>
     );
   });

@@ -16,7 +16,7 @@
 
 .navCloseBtn {
   cursor: pointer;
-  margin: 1em 22px auto auto;
+  margin: 1em 34px auto auto;
   width: 30px;
   height: 30px;
 }
@@ -33,12 +33,12 @@
 .navItem {
   font-size: 24px;
   color: rgb(59, 59, 59);
-  margin-top: 0.5em;
+  margin-top: 1em;
   padding: 0.5em 0;
-  cursor: pointer;
 }
 
 .navItem a {
+  padding: 0.5em 1em;
   text-decoration: none;
   color: inherit;
 }

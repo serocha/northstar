@@ -5,28 +5,39 @@
   padding: 2em 10%;
 
   @media (min-width: $medium-screen) {
-    padding: 4em 20%;
+    padding: 2em 20%;
   }
 }
 
 .transitionWrapper {
   width: 100%;
   display: flex;
+  pointer-events: none;
+}
+
+.topWrapper {
+  margin-top: -1px;
+}
+
+.bottomWrapper {
+  margin-bottom: -1px;
 }
 
 .transition {
   width: 100%;
-  margin-bottom: -1px;
+}
+
+.topTransition {
   @media (min-width: $medium-screen) {
-    transform: scaleY(75%) translateY(25%);
+    transform: scaleY(50%);
+    transform-origin: top;
   }
 }
 
-.transitionReverse {
-  width: 100%;
-  margin-bottom: -1px;
+.bottomTransition {
   @media (min-width: $medium-screen) {
-    transform: scaleY(40%) translateY(80%);
+    transform: scaleY(50%);
+    transform-origin: bottom;
   }
 }
 

@@ -2,8 +2,7 @@ import { useState, useEffect } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import NavTray from '../components/NavTray'
-import style from '../styles/ContactUs.module.scss'
-import globalStyles from '../utils/globalStyles'
+import style from '../styles/pages/ContactUs.module.scss'
 
 // need to update to React Forms
 function ContactUs(props) {
@@ -11,9 +10,6 @@ function ContactUs(props) {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
-  
-  const navRoutes = ['Home', 'Services', 'Training', 'Our Team'];
-  const footerRoutes = ['Back to Top', 'Home', 'About'];
 
   const MAX_WORD_COUNT = 150;
   const MAX_CHAR_COUNT = 1000;
@@ -37,9 +33,13 @@ function ContactUs(props) {
 
   return(
     <div id="contact">
-      <Header routes={navRoutes} isTrayOpen={props.isTrayOpen} toggleTray={props.toggleTray} />
+      <Header
+        navRoutes={props.navRoutes}
+        isTrayOpen={props.isTrayOpen}
+        toggleTray={props.toggleTray}
+      />
       <div>
-        <form className={globalStyles.txt}>
+        <form className='txt'>
           <div>Your details</div>
           <div className={style.infoSection}>
             <label htmlFor="name">Name *</label><br/>
@@ -84,17 +84,20 @@ function ContactUs(props) {
             </div>
             {message.length === MAX_CHAR_COUNT ? <div className={style.red}>You're at the character limit.</div> : null}
           </div>
-          <div className={globalStyles.btnWrapper}>
+          <div className='btnWrapper'>
             <button 
-              className={[globalStyles.centered, style.submitBtn].join(' ')}
+              className={['centered', style.submitBtn].join(' ')}
               type="submit">
                 Submit
             </button>
           </div>
         </form>
       </div>
-      <Footer routes={footerRoutes} />
-      <NavTray routes={navRoutes} isTrayOpen={props.isTrayOpen} toggleTray={props.toggleTray} />
+      <Footer footerRoutes={props.footerRoutes} />
+      <NavTray
+        navRoutes={props.navRoutes}
+        isTrayOpen={props.isTrayOpen}
+        toggleTray={props.toggleTray} />
     </div>
   );
 }

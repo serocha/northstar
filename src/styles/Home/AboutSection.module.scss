@@ -1,3 +1,5 @@
+@import '../partial/variables';
+
 .about {
   background-color: #e4ebdd;
 }
@@ -51,4 +53,11 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.aboutBottomTransition {
+  @media (min-width: $medium-screen) {
+    transform: scaleY(50%);
+    transform-origin: bottom;
+  }
 }

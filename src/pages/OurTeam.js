@@ -2,8 +2,7 @@ import { useEffect } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import NavTray from '../components/NavTray'
-import style from '../styles/OurTeam.module.scss'
-import globalStyles from '../utils/globalStyles'
+import style from '../styles/pages/OurTeam.module.scss'
 import leasa from '../assets/L.jpg'
 import melissa from '../assets/M.jpg'
 
@@ -13,13 +12,13 @@ function OurTeam(props) {
     window.scrollTo(0, 0)
   }, [])
 
-  const navRoutes = ['Home', 'Services', 'Training', 'Contact Us'];
-  const footerRoutes = ['Back to Top', 'Home', 'Contact Us'];
-
   return(
     <div id="about">
-      <Header routes={navRoutes} isTrayOpen={props.isTrayOpen} toggleTray={props.toggleTray} />
-      <div className={[globalStyles.txt, style.background].join(' ')}>
+      <Header 
+        navRoutes={props.navRoutes}
+        isTrayOpen={props.isTrayOpen}
+        toggleTray={props.toggleTray} />
+      <div className={['txt', style.background].join(' ')}>
         <h1 style={{color:'rgb(59, 59, 59)',textAlign:'center'}}>Our Team</h1>
         <div className={style.profile}>
           <div>
@@ -30,8 +29,8 @@ function OurTeam(props) {
             </div>
             <p>Leasa received her Bachelors of Arts in Psychology from The University of New Mexico and her Masters in Clinical Social Work from New Mexico Highlands University.</p>
             <p>She has 15 years of experience in the behavioral health field, six years as a Clinical Social Worker and eight years as a supervisor.</p>
-            <div className={[globalStyles.btnWrapper, style.profileBtnWrapper].join(' ')}>
-              <button className={[globalStyles.centered, style.profileBtn].join(' ')}>Contact Leasa</button>
+            <div className={['btnWrapper', style.profileBtnWrapper].join(' ')}>
+              <button className={['centered', style.profileBtn].join(' ')}>Contact Leasa</button>
             </div>
           </div>
         </div>
@@ -44,13 +43,16 @@ function OurTeam(props) {
           </div>
           <p>Melissa received her Bachelors of Art in Sculpture from the University of Arkansas and her Masters in Art Therapy and Counseling from Southwestern College in Santa Fe, NM.</p>
           <p>She has exceptional experience working with pre-teens, teens, and young adults facing numerous behavioral health challenges.</p>
-          <div className={[globalStyles.btnWrapper, style.profileBtnWrapper].join(' ')}>
-            <button className={[globalStyles.centered, style.profileBtn].join(' ')}>Contact Melissa</button>
+          <div className={['btnWrapper', style.profileBtnWrapper].join(' ')}>
+            <button className={['centered', style.profileBtn].join(' ')}>Contact Melissa</button>
           </div>
         </div>
       </div>
-      <Footer routes={footerRoutes} />
-      <NavTray routes={navRoutes} isTrayOpen={props.isTrayOpen} toggleTray={props.toggleTray} />
+      <Footer footerRoutes={props.footerRoutes} />
+      <NavTray
+        navRoutes={props.navRoutes}
+        isTrayOpen={props.isTrayOpen}
+        toggleTray={props.toggleTray} />
     </div>
   );
 }
