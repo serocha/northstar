@@ -1,4 +1,4 @@
-import style from '../../styles/Home/Training.module.scss'
+import style from '../../styles/Home/Training.module.scss';
 
 function Training() {
 

@@ -23,6 +23,7 @@ function Footer(props) {
       <div className={style.footerLinks}>
         {rendered}
       </div>
+      <div className={style.footerLine} />
       <div className={style.footerNotes}>
         <p>Copyright © 2023 North Star Counseling - All Rights Reserved.</p>
       </div>

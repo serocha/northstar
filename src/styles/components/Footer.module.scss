@@ -1,3 +1,5 @@
+@import '../partial/variables';
+
 .footer {
   background-color: rgb(54, 53, 53);
   color: white;
@@ -7,11 +9,20 @@
   padding: 2em;
   display: flex;
   color: white;
+  @media (min-width: $medium-screen) {
+    justify-content: flex-start;
+    padding-left: 0;
+    margin-left: 4rem;
+  }
 }
 
 .footerLinkWrapper {
   flex: 1;
   text-align: center;
+  @media (min-width: $medium-screen) {
+    margin: inherit auto;
+    flex: none;
+  }
 }
 
 .footerLink {
@@ -19,6 +30,13 @@
   cursor: pointer;
   text-decoration: none;
   color: inherit;
+  @media (min-width: $medium-screen) {
+    margin: 0 2em 0 0;
+    &:hover {
+      color: rgb(206, 206, 206);
+      text-decoration: underline;
+    }
+  }
 }
 
 .footerNotes {
@@ -26,4 +44,16 @@
   padding-bottom: 2em;
   text-align: center;
   font-size: 10px;
+  @media (min-width: $medium-screen) {
+    text-align: left;
+    margin-left: 4rem;
+  }
+}
+
+.footerLine {
+  width: 90%;
+  margin: auto;
+  height: 1px;
+  background-color: rgb(67, 67, 67);
+  border-radius: 4px;
 }

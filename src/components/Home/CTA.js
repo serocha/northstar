@@ -1,12 +1,12 @@
-import { Link } from 'react-router-dom'
-import style from '../../styles/Home/CTA.module.scss'
-import skies from '../../assets/skies.jpg'
+import { Link } from 'react-router-dom';
+import style from '../../styles/Home/CTA.module.scss';
+import skies from '../../assets/skies.jpg';
 
 function CTA() {
 
   return (
     <section id="cta" className={style.cta}>
-      <div className='txt' style={{color: 'white'}}>
+      <div className='txt' style={{color: 'white', paddingBottom: 0}}>
         <h2>We'd love to hear from you.</h2>
         <p style={{fontSize:'18px'}}>Schedule a consultation today, or find out more about our services.</p>
         <div className='btnWrapper'>

@@ -1,10 +1,10 @@
-import { useEffect } from 'react'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import NavTray from '../components/NavTray'
-import style from '../styles/pages/OurTeam.module.scss'
-import leasa from '../assets/L.jpg'
-import melissa from '../assets/M.jpg'
+import { useEffect } from 'react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import NavTray from '../components/NavTray';
+import style from '../styles/pages/OurTeam.module.scss';
+import leasa from '../assets/L.jpg';
+import melissa from '../assets/M.jpg';
 
 function OurTeam(props) {
 

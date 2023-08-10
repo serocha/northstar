@@ -1,15 +1,15 @@
-import { useState, useEffect } from 'react'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import NavTray from '../components/NavTray'
-import style from '../styles/pages/ContactUs.module.scss'
+import { useState, useEffect } from 'react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import NavTray from '../components/NavTray';
+import style from '../styles/pages/ContactUs.module.scss';
 
 // need to update to React Forms
 function ContactUs(props) {
 
   useEffect(() => {
     window.scrollTo(0, 0)
-  }, [])
+  }, []);
 
   const MAX_WORD_COUNT = 150;
   const MAX_CHAR_COUNT = 1000;

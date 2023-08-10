@@ -1,15 +1,15 @@
-import { Link } from 'react-router-dom'
-import style from '../../styles/Home/AboutSection.module.scss'
-import profile from '../../assets/profile.png'
+import { Link } from 'react-router-dom';
+import style from '../../styles/Home/AboutSection.module.scss';
+import profile from '../../assets/profile.png';
 
 function AboutSection(props) {
 
   return (
     <section id="about" className={style.about}>
       <div className='transitionWrapper topWrapper'>
-        <svg className='transition' style={{top: 0}} viewBox='0 0 1440 320'><path fill="#679267" fillOpacity="1" d="M0,224L1440,128L1440,0L0,0Z"></path></svg>
+        <svg className='transition' viewBox='0 0 1440 320'><path fill="#679267" fillOpacity="1" d="M0,224L1440,128L1440,0L0,0Z"></path></svg>
       </div>
-      <div className='txt'>
+      <div className={style.aboutTxt}>
         <h1 className={style.aboutHook}>Find Your Fit</h1>
         <p className={style.aboutMore}>Our therapists offer a range of specialized approaches, techniques, and styles.</p>
         <div className={style.aboutBtnWrapper}>

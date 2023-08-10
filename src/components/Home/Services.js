@@ -1,8 +1,8 @@
-import { Link } from 'react-router-dom'
-import idCard from '../../assets/id.png'
-import chat from '../../assets/chat.png'
-import grow from '../../assets/grow.png'
-import style from '../../styles/Home/Services.module.scss'
+import { Link } from 'react-router-dom';
+import idCard from '../../assets/id.png';
+import chat from '../../assets/chat.png';
+import grow from '../../assets/grow.png';
+import style from '../../styles/Home/Services.module.scss';
 
 function Services() {
 

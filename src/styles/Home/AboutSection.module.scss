@@ -4,6 +4,14 @@
   background-color: #e4ebdd;
 }
 
+.aboutTxt {
+  padding: 2em 10%;
+  @media (min-width: $medium-screen) {
+    margin-top: -5%;
+    padding: 2em 20% 0;
+  }
+}
+
 .aboutHook {
   color: rgb(59, 59, 59);
   text-align: center;
@@ -59,5 +67,6 @@
   @media (min-width: $medium-screen) {
     transform: scaleY(50%);
     transform-origin: bottom;
+    margin-top: -10%;
   }
 }

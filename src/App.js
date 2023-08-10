@@ -1,11 +1,11 @@
-import { useState } from 'react'
-import { Routes, Route } from 'react-router-dom'
-import { navRoutes, footerRoutes } from './utils/routes'
-import Home from './pages/Home'
-import OurTeam from './pages/OurTeam'
-import ContactUs from './pages/ContactUs'
-import Submitted from './components/Submitted'
-import './styles/partial/_global.scss'
+import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { navRoutes, footerRoutes } from './utils/routes';
+import Home from './pages/Home';
+import OurTeam from './pages/OurTeam';
+import ContactUs from './pages/ContactUs';
+import Submitted from './components/Submitted';
+import './styles/partial/_global.scss';
 
 function App() {
   const [isTrayOpen, setTrayOpen] = useState(false);
